@@ -39,17 +39,17 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="data/risk_dis_1.js"></script>
-        <script src="data/_2.js"></script>
-        <script src="data/riskt__3.js"></script>
-        <script src="data/riskt__4.js"></script>
-        <script src="data/riskt__5.js"></script>
-        <script src="data/riskt__6.js"></script>
-        <script src="data/riskt__7.js"></script>
+        <script src="data/risk_landslide_1.js"></script>
+        <script src="data/sub_district_2.js"></script>
+        <script src="data/riskt_very_low_3.js"></script>
+        <script src="data/riskt_low_4.js"></script>
+        <script src="data/very_high_5.js"></script>
+        <script src="data/riskt_high_6.js"></script>
+        <script src="data/riskt_moderate_7.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[7.746870111725515,98.08036413970692],[8.211032765161091,98.6231704654663]]);
+        }).fitBounds([[7.746870111725515,97.99704584350373],[8.211032765161091,98.70648876166949]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -111,7 +111,7 @@
         });
         layer_OSMStandard_0;
         map.addLayer(layer_OSMStandard_0);
-        function pop_risk_dis_1(feature, layer) {
+        function pop_risk_landslide_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>qc_id</strong><br />' + (feature.properties['qc_id'] !== null ? autolinker.link(feature.properties['qc_id'].toLocaleString()) : '') + '</td>\
@@ -130,11 +130,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_risk_dis_1_0(feature) {
+        function style_risk_landslide_1_0(feature) {
             switch(String(feature.properties['risk_n'])) {
                 case '1':
                     return {
-                pane: 'pane_risk_dis_1',
+                pane: 'pane_risk_landslide_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -149,7 +149,7 @@
                     break;
                 case '2':
                     return {
-                pane: 'pane_risk_dis_1',
+                pane: 'pane_risk_landslide_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -164,7 +164,7 @@
                     break;
                 case '3':
                     return {
-                pane: 'pane_risk_dis_1',
+                pane: 'pane_risk_landslide_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -179,7 +179,7 @@
                     break;
                 case '4':
                     return {
-                pane: 'pane_risk_dis_1',
+                pane: 'pane_risk_landslide_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -194,7 +194,7 @@
                     break;
                 case '5':
                     return {
-                pane: 'pane_risk_dis_1',
+                pane: 'pane_risk_landslide_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -209,21 +209,21 @@
                     break;
             }
         }
-        map.createPane('pane_risk_dis_1');
-        map.getPane('pane_risk_dis_1').style.zIndex = 401;
-        map.getPane('pane_risk_dis_1').style['mix-blend-mode'] = 'normal';
-        var layer_risk_dis_1 = new L.geoJson(json_risk_dis_1, {
+        map.createPane('pane_risk_landslide_1');
+        map.getPane('pane_risk_landslide_1').style.zIndex = 401;
+        map.getPane('pane_risk_landslide_1').style['mix-blend-mode'] = 'normal';
+        var layer_risk_landslide_1 = new L.geoJson(json_risk_landslide_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_risk_dis_1',
-            layerName: 'layer_risk_dis_1',
-            pane: 'pane_risk_dis_1',
-            onEachFeature: pop_risk_dis_1,
-            style: style_risk_dis_1_0,
+            dataVar: 'json_risk_landslide_1',
+            layerName: 'layer_risk_landslide_1',
+            pane: 'pane_risk_landslide_1',
+            onEachFeature: pop_risk_landslide_1,
+            style: style_risk_landslide_1_0,
         });
-        bounds_group.addLayer(layer_risk_dis_1);
-        map.addLayer(layer_risk_dis_1);
-        function pop__2(feature, layer) {
+        bounds_group.addLayer(layer_risk_landslide_1);
+        map.addLayer(layer_risk_landslide_1);
+        function pop_sub_district_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>qc_id</strong><br />' + (feature.properties['qc_id'] !== null ? autolinker.link(feature.properties['qc_id'].toLocaleString()) : '') + '</td>\
@@ -242,9 +242,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style__2_0() {
+        function style_sub_district_2_0() {
             return {
-                pane: 'pane__2',
+                pane: 'pane_sub_district_2',
                 opacity: 1,
                 color: 'rgba(81,12,12,1.0)',
                 dashArray: '',
@@ -257,21 +257,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane__2');
-        map.getPane('pane__2').style.zIndex = 402;
-        map.getPane('pane__2').style['mix-blend-mode'] = 'normal';
-        var layer__2 = new L.geoJson(json__2, {
+        map.createPane('pane_sub_district_2');
+        map.getPane('pane_sub_district_2').style.zIndex = 402;
+        map.getPane('pane_sub_district_2').style['mix-blend-mode'] = 'normal';
+        var layer_sub_district_2 = new L.geoJson(json_sub_district_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json__2',
-            layerName: 'layer__2',
-            pane: 'pane__2',
-            onEachFeature: pop__2,
-            style: style__2_0,
+            dataVar: 'json_sub_district_2',
+            layerName: 'layer_sub_district_2',
+            pane: 'pane_sub_district_2',
+            onEachFeature: pop_sub_district_2,
+            style: style_sub_district_2_0,
         });
-        bounds_group.addLayer(layer__2);
-        map.addLayer(layer__2);
-        function pop_riskt__3(feature, layer) {
+        bounds_group.addLayer(layer_sub_district_2);
+        map.addLayer(layer_sub_district_2);
+        function pop_riskt_very_low_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>qc_id</strong><br />' + (feature.properties['qc_id'] !== null ? autolinker.link(feature.properties['qc_id'].toLocaleString()) : '') + '</td>\
@@ -293,11 +293,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_riskt__3_0(feature) {
+        function style_riskt_very_low_3_0(feature) {
             switch(String(feature.properties['risk_n'])) {
                 case '1':
                     return {
-                pane: 'pane_riskt__3',
+                pane: 'pane_riskt_very_low_3',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -312,7 +312,7 @@
                     break;
                 case '2':
                     return {
-                pane: 'pane_riskt__3',
+                pane: 'pane_riskt_very_low_3',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -327,7 +327,7 @@
                     break;
                 case '3':
                     return {
-                pane: 'pane_riskt__3',
+                pane: 'pane_riskt_very_low_3',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -342,7 +342,7 @@
                     break;
                 case '4':
                     return {
-                pane: 'pane_riskt__3',
+                pane: 'pane_riskt_very_low_3',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -357,7 +357,7 @@
                     break;
                 case '5':
                     return {
-                pane: 'pane_riskt__3',
+                pane: 'pane_riskt_very_low_3',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -372,21 +372,21 @@
                     break;
             }
         }
-        map.createPane('pane_riskt__3');
-        map.getPane('pane_riskt__3').style.zIndex = 403;
-        map.getPane('pane_riskt__3').style['mix-blend-mode'] = 'normal';
-        var layer_riskt__3 = new L.geoJson(json_riskt__3, {
+        map.createPane('pane_riskt_very_low_3');
+        map.getPane('pane_riskt_very_low_3').style.zIndex = 403;
+        map.getPane('pane_riskt_very_low_3').style['mix-blend-mode'] = 'normal';
+        var layer_riskt_very_low_3 = new L.geoJson(json_riskt_very_low_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_riskt__3',
-            layerName: 'layer_riskt__3',
-            pane: 'pane_riskt__3',
-            onEachFeature: pop_riskt__3,
-            style: style_riskt__3_0,
+            dataVar: 'json_riskt_very_low_3',
+            layerName: 'layer_riskt_very_low_3',
+            pane: 'pane_riskt_very_low_3',
+            onEachFeature: pop_riskt_very_low_3,
+            style: style_riskt_very_low_3_0,
         });
-        bounds_group.addLayer(layer_riskt__3);
-        map.addLayer(layer_riskt__3);
-        function pop_riskt__4(feature, layer) {
+        bounds_group.addLayer(layer_riskt_very_low_3);
+        map.addLayer(layer_riskt_very_low_3);
+        function pop_riskt_low_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>qc_id</strong><br />' + (feature.properties['qc_id'] !== null ? autolinker.link(feature.properties['qc_id'].toLocaleString()) : '') + '</td>\
@@ -408,11 +408,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_riskt__4_0(feature) {
+        function style_riskt_low_4_0(feature) {
             switch(String(feature.properties['risk_n'])) {
                 case '1':
                     return {
-                pane: 'pane_riskt__4',
+                pane: 'pane_riskt_low_4',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -427,7 +427,7 @@
                     break;
                 case '2':
                     return {
-                pane: 'pane_riskt__4',
+                pane: 'pane_riskt_low_4',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -442,7 +442,7 @@
                     break;
                 case '3':
                     return {
-                pane: 'pane_riskt__4',
+                pane: 'pane_riskt_low_4',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -457,7 +457,7 @@
                     break;
                 case '4':
                     return {
-                pane: 'pane_riskt__4',
+                pane: 'pane_riskt_low_4',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -472,7 +472,7 @@
                     break;
                 case '5':
                     return {
-                pane: 'pane_riskt__4',
+                pane: 'pane_riskt_low_4',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -487,21 +487,21 @@
                     break;
             }
         }
-        map.createPane('pane_riskt__4');
-        map.getPane('pane_riskt__4').style.zIndex = 404;
-        map.getPane('pane_riskt__4').style['mix-blend-mode'] = 'normal';
-        var layer_riskt__4 = new L.geoJson(json_riskt__4, {
+        map.createPane('pane_riskt_low_4');
+        map.getPane('pane_riskt_low_4').style.zIndex = 404;
+        map.getPane('pane_riskt_low_4').style['mix-blend-mode'] = 'normal';
+        var layer_riskt_low_4 = new L.geoJson(json_riskt_low_4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_riskt__4',
-            layerName: 'layer_riskt__4',
-            pane: 'pane_riskt__4',
-            onEachFeature: pop_riskt__4,
-            style: style_riskt__4_0,
+            dataVar: 'json_riskt_low_4',
+            layerName: 'layer_riskt_low_4',
+            pane: 'pane_riskt_low_4',
+            onEachFeature: pop_riskt_low_4,
+            style: style_riskt_low_4_0,
         });
-        bounds_group.addLayer(layer_riskt__4);
-        map.addLayer(layer_riskt__4);
-        function pop_riskt__5(feature, layer) {
+        bounds_group.addLayer(layer_riskt_low_4);
+        map.addLayer(layer_riskt_low_4);
+        function pop_very_high_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>qc_id</strong><br />' + (feature.properties['qc_id'] !== null ? autolinker.link(feature.properties['qc_id'].toLocaleString()) : '') + '</td>\
@@ -523,11 +523,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_riskt__5_0(feature) {
+        function style_very_high_5_0(feature) {
             switch(String(feature.properties['risk_n'])) {
                 case '1':
                     return {
-                pane: 'pane_riskt__5',
+                pane: 'pane_very_high_5',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -542,7 +542,7 @@
                     break;
                 case '2':
                     return {
-                pane: 'pane_riskt__5',
+                pane: 'pane_very_high_5',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -557,7 +557,7 @@
                     break;
                 case '3':
                     return {
-                pane: 'pane_riskt__5',
+                pane: 'pane_very_high_5',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -572,7 +572,7 @@
                     break;
                 case '4':
                     return {
-                pane: 'pane_riskt__5',
+                pane: 'pane_very_high_5',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -587,7 +587,7 @@
                     break;
                 case '5':
                     return {
-                pane: 'pane_riskt__5',
+                pane: 'pane_very_high_5',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -602,21 +602,21 @@
                     break;
             }
         }
-        map.createPane('pane_riskt__5');
-        map.getPane('pane_riskt__5').style.zIndex = 405;
-        map.getPane('pane_riskt__5').style['mix-blend-mode'] = 'normal';
-        var layer_riskt__5 = new L.geoJson(json_riskt__5, {
+        map.createPane('pane_very_high_5');
+        map.getPane('pane_very_high_5').style.zIndex = 405;
+        map.getPane('pane_very_high_5').style['mix-blend-mode'] = 'normal';
+        var layer_very_high_5 = new L.geoJson(json_very_high_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_riskt__5',
-            layerName: 'layer_riskt__5',
-            pane: 'pane_riskt__5',
-            onEachFeature: pop_riskt__5,
-            style: style_riskt__5_0,
+            dataVar: 'json_very_high_5',
+            layerName: 'layer_very_high_5',
+            pane: 'pane_very_high_5',
+            onEachFeature: pop_very_high_5,
+            style: style_very_high_5_0,
         });
-        bounds_group.addLayer(layer_riskt__5);
-        map.addLayer(layer_riskt__5);
-        function pop_riskt__6(feature, layer) {
+        bounds_group.addLayer(layer_very_high_5);
+        map.addLayer(layer_very_high_5);
+        function pop_riskt_high_6(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>qc_id</strong><br />' + (feature.properties['qc_id'] !== null ? autolinker.link(feature.properties['qc_id'].toLocaleString()) : '') + '</td>\
@@ -638,11 +638,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_riskt__6_0(feature) {
+        function style_riskt_high_6_0(feature) {
             switch(String(feature.properties['risk_n'])) {
                 case '1':
                     return {
-                pane: 'pane_riskt__6',
+                pane: 'pane_riskt_high_6',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -657,7 +657,7 @@
                     break;
                 case '2':
                     return {
-                pane: 'pane_riskt__6',
+                pane: 'pane_riskt_high_6',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -672,7 +672,7 @@
                     break;
                 case '3':
                     return {
-                pane: 'pane_riskt__6',
+                pane: 'pane_riskt_high_6',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -687,7 +687,7 @@
                     break;
                 case '4':
                     return {
-                pane: 'pane_riskt__6',
+                pane: 'pane_riskt_high_6',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -702,7 +702,7 @@
                     break;
                 case '5':
                     return {
-                pane: 'pane_riskt__6',
+                pane: 'pane_riskt_high_6',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -717,21 +717,21 @@
                     break;
             }
         }
-        map.createPane('pane_riskt__6');
-        map.getPane('pane_riskt__6').style.zIndex = 406;
-        map.getPane('pane_riskt__6').style['mix-blend-mode'] = 'normal';
-        var layer_riskt__6 = new L.geoJson(json_riskt__6, {
+        map.createPane('pane_riskt_high_6');
+        map.getPane('pane_riskt_high_6').style.zIndex = 406;
+        map.getPane('pane_riskt_high_6').style['mix-blend-mode'] = 'normal';
+        var layer_riskt_high_6 = new L.geoJson(json_riskt_high_6, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_riskt__6',
-            layerName: 'layer_riskt__6',
-            pane: 'pane_riskt__6',
-            onEachFeature: pop_riskt__6,
-            style: style_riskt__6_0,
+            dataVar: 'json_riskt_high_6',
+            layerName: 'layer_riskt_high_6',
+            pane: 'pane_riskt_high_6',
+            onEachFeature: pop_riskt_high_6,
+            style: style_riskt_high_6_0,
         });
-        bounds_group.addLayer(layer_riskt__6);
-        map.addLayer(layer_riskt__6);
-        function pop_riskt__7(feature, layer) {
+        bounds_group.addLayer(layer_riskt_high_6);
+        map.addLayer(layer_riskt_high_6);
+        function pop_riskt_moderate_7(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>qc_id</strong><br />' + (feature.properties['qc_id'] !== null ? autolinker.link(feature.properties['qc_id'].toLocaleString()) : '') + '</td>\
@@ -753,11 +753,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_riskt__7_0(feature) {
+        function style_riskt_moderate_7_0(feature) {
             switch(String(feature.properties['risk_n'])) {
                 case '1':
                     return {
-                pane: 'pane_riskt__7',
+                pane: 'pane_riskt_moderate_7',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -772,7 +772,7 @@
                     break;
                 case '2':
                     return {
-                pane: 'pane_riskt__7',
+                pane: 'pane_riskt_moderate_7',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -787,7 +787,7 @@
                     break;
                 case '3':
                     return {
-                pane: 'pane_riskt__7',
+                pane: 'pane_riskt_moderate_7',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -802,7 +802,7 @@
                     break;
                 case '4':
                     return {
-                pane: 'pane_riskt__7',
+                pane: 'pane_riskt_moderate_7',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -817,7 +817,7 @@
                     break;
                 case '5':
                     return {
-                pane: 'pane_riskt__7',
+                pane: 'pane_riskt_moderate_7',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -832,20 +832,20 @@
                     break;
             }
         }
-        map.createPane('pane_riskt__7');
-        map.getPane('pane_riskt__7').style.zIndex = 407;
-        map.getPane('pane_riskt__7').style['mix-blend-mode'] = 'normal';
-        var layer_riskt__7 = new L.geoJson(json_riskt__7, {
+        map.createPane('pane_riskt_moderate_7');
+        map.getPane('pane_riskt_moderate_7').style.zIndex = 407;
+        map.getPane('pane_riskt_moderate_7').style['mix-blend-mode'] = 'normal';
+        var layer_riskt_moderate_7 = new L.geoJson(json_riskt_moderate_7, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_riskt__7',
-            layerName: 'layer_riskt__7',
-            pane: 'pane_riskt__7',
-            onEachFeature: pop_riskt__7,
-            style: style_riskt__7_0,
+            dataVar: 'json_riskt_moderate_7',
+            layerName: 'layer_riskt_moderate_7',
+            pane: 'pane_riskt_moderate_7',
+            onEachFeature: pop_riskt_moderate_7,
+            style: style_riskt_moderate_7_0,
         });
-        bounds_group.addLayer(layer_riskt__7);
-        map.addLayer(layer_riskt__7);
+        bounds_group.addLayer(layer_riskt_moderate_7);
+        map.addLayer(layer_riskt_moderate_7);
         var osmGeocoder = new L.Control.Geocoder({
             collapsed: true,
             position: 'topleft',
@@ -858,14 +858,14 @@
         .title += 'Search for a place';
         var baseMaps = {};
         var overlaysTree = [
-        {label: '<b>รายความเสี่ยง</b>', selectAllCheckbox: false, children: [
-            {label: 'riskt_ปานกลาง<br /><table><tr><td style="text-align: center;"><img src="legend/riskt__7_เสยงนอยมาก0.png" /></td><td>เสี่ยงน้อยมาก</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__7_เสยงนอย1.png" /></td><td>เสี่ยงน้อย</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__7_เสยงปานกลาง2.png" /></td><td>เสี่ยงปานกลาง</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__7_เสยงมาก3.png" /></td><td>เสี่ยงมาก</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__7_เสยงมากทสด4.png" /></td><td>เสี่ยงมากที่สุด</td></tr></table>', layer: layer_riskt__7},
-            {label: 'riskt_มาก<br /><table><tr><td style="text-align: center;"><img src="legend/riskt__6_เสยงนอยมาก0.png" /></td><td>เสี่ยงน้อยมาก</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__6_เสยงนอย1.png" /></td><td>เสี่ยงน้อย</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__6_เสยงปานกลาง2.png" /></td><td>เสี่ยงปานกลาง</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__6_เสยงมาก3.png" /></td><td>เสี่ยงมาก</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__6_เสยงมากทสด4.png" /></td><td>เสี่ยงมากที่สุด</td></tr></table>', layer: layer_riskt__6},
-            {label: 'riskt_มากที่สุด<br /><table><tr><td style="text-align: center;"><img src="legend/riskt__5_เสยงนอยมาก0.png" /></td><td>เสี่ยงน้อยมาก</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__5_เสยงนอย1.png" /></td><td>เสี่ยงน้อย</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__5_เสยงปานกลาง2.png" /></td><td>เสี่ยงปานกลาง</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__5_เสยงมาก3.png" /></td><td>เสี่ยงมาก</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__5_เสยงมากทสด4.png" /></td><td>เสี่ยงมากที่สุด</td></tr></table>', layer: layer_riskt__5},
-            {label: 'riskt_เสียงน้อย<br /><table><tr><td style="text-align: center;"><img src="legend/riskt__4_เสยงนอยมาก0.png" /></td><td>เสี่ยงน้อยมาก</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__4_เสยงนอย1.png" /></td><td>เสี่ยงน้อย</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__4_เสยงปานกลาง2.png" /></td><td>เสี่ยงปานกลาง</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__4_เสยงมาก3.png" /></td><td>เสี่ยงมาก</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__4_เสยงมากทสด4.png" /></td><td>เสี่ยงมากที่สุด</td></tr></table>', layer: layer_riskt__4},
-            {label: 'riskt_เสี่ยงน้อยมาก<br /><table><tr><td style="text-align: center;"><img src="legend/riskt__3_เสยงนอยมาก0.png" /></td><td>เสี่ยงน้อยมาก</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__3_เสยงนอย1.png" /></td><td>เสี่ยงน้อย</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__3_เสยงปานกลาง2.png" /></td><td>เสี่ยงปานกลาง</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__3_เสยงมาก3.png" /></td><td>เสี่ยงมาก</td></tr><tr><td style="text-align: center;"><img src="legend/riskt__3_เสยงมากทสด4.png" /></td><td>เสี่ยงมากที่สุด</td></tr></table>', layer: layer_riskt__3},]},
-            {label: '<img src="legend/_2.png" /> ขอบเขตตำบล', layer: layer__2},
-            {label: 'ระดับความเสี่ยง (risk_dis)<br /><table><tr><td style="text-align: center;"><img src="legend/risk_dis_1_เสยงนอยมาก0.png" /></td><td>เสี่ยงน้อยมาก</td></tr><tr><td style="text-align: center;"><img src="legend/risk_dis_1_เสยงนอย1.png" /></td><td>เสี่ยงน้อย</td></tr><tr><td style="text-align: center;"><img src="legend/risk_dis_1_เสยงปานกลาง2.png" /></td><td>เสี่ยงปานกลาง</td></tr><tr><td style="text-align: center;"><img src="legend/risk_dis_1_เสยงมาก3.png" /></td><td>เสี่ยงมาก</td></tr><tr><td style="text-align: center;"><img src="legend/risk_dis_1_เสยงมากทสด4.png" /></td><td>เสี่ยงมากที่สุด</td></tr></table>', layer: layer_risk_dis_1},
+        {label: '<b>by_levels</b>', selectAllCheckbox: true, children: [
+            {label: 'riskt_moderate<br /><table><tr><td style="text-align: center;"><img src="legend/riskt_moderate_7_VeryLow0.png" /></td><td>Very Low</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_moderate_7_Low1.png" /></td><td>Low</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_moderate_7_Moderate2.png" /></td><td>Moderate</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_moderate_7_High3.png" /></td><td>High</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_moderate_7_VeryHigh4.png" /></td><td>Very High</td></tr></table>', layer: layer_riskt_moderate_7},
+            {label: 'riskt_high<br /><table><tr><td style="text-align: center;"><img src="legend/riskt_high_6_VeryLow0.png" /></td><td>Very Low</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_high_6_Low1.png" /></td><td>Low</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_high_6_Moderate2.png" /></td><td>Moderate</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_high_6_High3.png" /></td><td>High</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_high_6_VeryHigh4.png" /></td><td>Very High</td></tr></table>', layer: layer_riskt_high_6},
+            {label: 'very_high<br /><table><tr><td style="text-align: center;"><img src="legend/very_high_5_VeryLow0.png" /></td><td>Very Low</td></tr><tr><td style="text-align: center;"><img src="legend/very_high_5_Low1.png" /></td><td>Low</td></tr><tr><td style="text-align: center;"><img src="legend/very_high_5_Moderate2.png" /></td><td>Moderate</td></tr><tr><td style="text-align: center;"><img src="legend/very_high_5_High3.png" /></td><td>High</td></tr><tr><td style="text-align: center;"><img src="legend/very_high_5_VeryHigh4.png" /></td><td>Very High</td></tr></table>', layer: layer_very_high_5},
+            {label: 'riskt_low<br /><table><tr><td style="text-align: center;"><img src="legend/riskt_low_4_VeryLow0.png" /></td><td>Very Low</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_low_4_Low1.png" /></td><td>Low</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_low_4_Moderate2.png" /></td><td>Moderate</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_low_4_High3.png" /></td><td>High</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_low_4_VeryHigh4.png" /></td><td>Very High</td></tr></table>', layer: layer_riskt_low_4},
+            {label: 'riskt_very_low<br /><table><tr><td style="text-align: center;"><img src="legend/riskt_very_low_3_VeryLow0.png" /></td><td>Very Low</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_very_low_3_Low1.png" /></td><td>Low</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_very_low_3_Moderate2.png" /></td><td>Moderate</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_very_low_3_High3.png" /></td><td>High</td></tr><tr><td style="text-align: center;"><img src="legend/riskt_very_low_3_VeryHigh4.png" /></td><td>Very High</td></tr></table>', layer: layer_riskt_very_low_3},]},
+            {label: '<img src="legend/sub_district_2.png" /> sub_district', layer: layer_sub_district_2},
+            {label: 'risk_landslide<br /><table><tr><td style="text-align: center;"><img src="legend/risk_landslide_1_VeryLow0.png" /></td><td>Very Low</td></tr><tr><td style="text-align: center;"><img src="legend/risk_landslide_1_Low1.png" /></td><td>Low</td></tr><tr><td style="text-align: center;"><img src="legend/risk_landslide_1_Moderate2.png" /></td><td>Moderate</td></tr><tr><td style="text-align: center;"><img src="legend/risk_landslide_1_High3.png" /></td><td>High</td></tr><tr><td style="text-align: center;"><img src="legend/risk_landslide_1_VeryHigh4.png" /></td><td>Very High</td></tr></table>', layer: layer_risk_landslide_1},
             {label: "OSM Standard", layer: layer_OSMStandard_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
@@ -874,32 +874,82 @@
             //openedSymbol: '&#8863; &#x1f5c1;',
             //collapseAll: 'Collapse all',
             //expandAll: 'Expand all',
-            collapsed: true,
+            collapsed: false, 
         });
         lay.addTo(map);
+		document.addEventListener("DOMContentLoaded", function() {
+            // set new Layers List height which considers toggle icon
+            function newLayersListHeight() {
+                var layerScrollbarElement = document.querySelector('.leaflet-control-layers-scrollbar');
+                if (layerScrollbarElement) {
+                    var layersListElement = document.querySelector('.leaflet-control-layers-list');
+                    var originalHeight = layersListElement.style.height 
+                        || window.getComputedStyle(layersListElement).height;
+                    var newHeight = parseFloat(originalHeight) - 50;
+                    layersListElement.style.height = newHeight + 'px';
+                }
+            }
+            var isLayersListExpanded = true;
+            var controlLayersElement = document.querySelector('.leaflet-control-layers');
+            var toggleLayerControl = document.querySelector('.leaflet-control-layers-toggle');
+            // toggle Collapsed/Expanded and apply new Layers List height
+            toggleLayerControl.addEventListener('click', function() {
+                if (isLayersListExpanded) {
+                    controlLayersElement.classList.remove('leaflet-control-layers-expanded');
+                } else {
+                    controlLayersElement.classList.add('leaflet-control-layers-expanded');
+                }
+                isLayersListExpanded = !isLayersListExpanded;
+                newLayersListHeight()
+            });	
+			// apply new Layers List height if toggle layerstree
+			if (controlLayersElement) {
+				controlLayersElement.addEventListener('click', function(event) {
+					var toggleLayerHeaderPointer = event.target.closest('.leaflet-layerstree-header-pointer span');
+					if (toggleLayerHeaderPointer) {
+						newLayersListHeight();
+					}
+				});
+			}
+            // Collapsed/Expanded at Start to apply new height
+            setTimeout(function() {
+                toggleLayerControl.click();
+            }, 10);
+            setTimeout(function() {
+                toggleLayerControl.click();
+            }, 10);
+            // Collapsed touch/small screen
+            var isSmallScreen = window.innerWidth < 650;
+            if (isSmallScreen) {
+                setTimeout(function() {
+                    controlLayersElement.classList.remove('leaflet-control-layers-expanded');
+                    isLayersListExpanded = !isLayersListExpanded;
+                }, 500);
+            }  
+        });       
         setBounds();
         var i = 0;
-        layer__2.eachLayer(function(layer) {
+        layer_sub_district_2.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['sub_distri'] !== null?String('<div style="color: #323232; font-size: 10pt; font-weight: bold; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['sub_distri']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css__2'});
+            layer.bindTooltip((layer.feature.properties['sub_distri'] !== null?String('<div style="color: #323232; font-size: 10pt; font-weight: bold; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['sub_distri']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_sub_district_2'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
               addLabel(layer, i);
               i++;
         });
-        resetLabels([layer__2]);
+        resetLabels([layer_sub_district_2]);
         map.on("zoomend", function(){
-            resetLabels([layer__2]);
+            resetLabels([layer_sub_district_2]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer__2]);
+            resetLabels([layer_sub_district_2]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer__2]);
+            resetLabels([layer_sub_district_2]);
         });
         </script>
     </body>
