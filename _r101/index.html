@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GIST: Phuket Landslide Risk - Map</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        a {text-decoration:brown;}
+        .top, .bottom {
+            width: 100%;
+        }
+        .top {
+            padding: 0px;
+            background-color: #f1f1f1;
+            text-align: left;
+        }
+        .main {
+            width: 100%;
+            height: calc(100% - 200px);
+            min-height: 465px;
+        }
+        .bottom {
+            padding: 0px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            bottom: 0px;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="w3-container w3-blue">
+    <img src="images/gist_logo.jpg" width="32px"/><span> GIST - Geoinformatics Services and Training Center</span>
+</div>
+<div class="w3-container w3-margin-bottom">
+    <center>
+    <h3>พื้นที่เสี่ยงการเกิดแผ่นดินถล่ม จังหวัดภูเก็ต</h3>
+    <p>
+        <a href="javascript:void(0)" onclick="document.getElementById('uses').classList.toggle('w3-show')" style="color: brown;">ข้อมูล</a>ในหน้านี้จัดทำขึ้นเพื่อวัตถุประสงค์ในการให้ข้อมูลทั่วไปเท่านั้น และไม่สามารถใช้อ้างอิงทางกฎหมายได้
+    </p>
+    <div id="uses" class="w3-hide w3-animate-opacity" width="45%">
+            <ul style="display: inline-block;text-align: justify;">
+                <li>ข้อมูลในระบบนี้ไม่สามารถอ้างอิงทางกฏหมายได้</li>
+                <li>ห้ามนำข้อมูลไปใช้ประโยชน์เชิงพาณิชย์</li>
+                <li>ศูนย์ GIST จะไม่รับผิดชอบการกระทำใดๆ ที่ก่อให้เกิดความเสียหายจากการนำข้อมูลไปใช้หรืออ้างอิง</li>
+            </ul>
+    </div>
+    </center>
+</div>
+
+<div class="main">
+    <!-- <iframe id="map" src="risk_landslide/index.html">Loading map, please wait ...</iframe> -->
+    <iframe id="map" src="risk_landslide/map.html">Loading map, please wait ...</iframe><br/>
+</div>
+<!--
+<center><a href="risk_landslide/map.html" target="_blank" title="เปิดแผนที่ในหน้าใหม่">เปิดแผนที่ในหน้าใหม่</a></center>
+-->
+<div class="w3-container bottom w3-margin-top w3-white">
+<a href="https://www.facebook.com/GISTPSUPhuket" target="_blank">GIST - ศูนย์ฝึกอบรมและบริการด้านเทคโนโลยีภูมิสารสนเทศ ม.อ.ภูเก็ต</a> © 2024. All rights reserved.
+</div>
+</body>
+</html>
